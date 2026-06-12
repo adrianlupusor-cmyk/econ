@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ELI Moldova – Indicatorul Economic Anticipator | Dashboard interactiv</title>
-<meta name="description" content="ELI Moldova: indicator compozit lunar al dinamicii economice (2010–2026), construit din 9 indicatori BNS și BNM. Creștere, stagnare sau declin – semnal disponibil cu 1–2 trimestre înaintea PIB.">
-<meta property="og:title" content="ELI Moldova – Indicatorul Economic Anticipator">
+<title>Indicatorul Expert-Grup – Termometrul Economic al Moldovei | Dashboard interactiv</title>
+<meta name="description" content="Indicatorul Expert-Grup – Termometrul Economic al Moldovei: indicator compozit lunar al dinamicii economice (2010–2026), construit din 9 indicatori BNS și BNM. Creștere, stagnare sau declin – semnal disponibil cu 1–2 trimestre înaintea PIB.">
+<meta property="og:title" content="Indicatorul Expert-Grup – Termometrul Economic al Moldovei">
 <meta property="og:description" content="Dashboard interactiv: semnalul lunar al economiei Moldovei din 9 indicatori BNS și BNM, 2010–2026.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ro_RO">
@@ -70,37 +70,37 @@ footer{font-size:11.5px;color:#888;line-height:1.5;margin-top:6px}
 <div class="wrap">
 <header>
   <div>
-    <h1>ELI Moldova – Indicatorul Economic Anticipator</h1>
+    <h1>Indicatorul Expert-Grup – Termometrul Economic al Moldovei</h1>
     <div class="sub">Compozit lunar din 9 indicatori BNS &amp; BNM · ianuarie 2010 – <span id="lastm"></span> · actualizat 12.06.2026</div>
   </div>
   <div class="badge" id="badge"></div>
 </header>
 
 <div class="intro">
-<b>Ce este ELI?</b> ELI (Economic Leading Indicator) sintetizează, într-un singur semnal lunar, nouă indicatori publicați de BNS și BNM – producția industrială, comerțul cu amănuntul, exporturile, importurile, transferurile persoanelor fizice, creditul, masa monetară M3, calitatea portofoliilor bancare (NPL) și rata de bază – și clasifică starea economiei în trei regimuri: <b style="color:var(--green)">creștere</b> (ELI &gt; 0), <b style="color:var(--amber)">stagnare</b> (−0,5…0) și <b style="color:var(--red)">declin</b> (&lt; −0,5). Indicatorul este exprimat în abateri standard față de dinamica medie a perioadei 2010–2026, iar calibrarea pe PIB (PIB a/a ≈ 3,1 + 6,5 × ELI) permite citirea directă: valoarea zero corespunde unei creșteri economice de circa 3%, pragul de −0,5σ – intrării PIB în teritoriu negativ. Construit conform practicilor OCDE (CLI), Conference Board (LEI), Comisiei Europene (ESI) și Băncii Italiei (€-coin), ELI este disponibil cu circa 1–2 trimestre înaintea statisticii oficiale a PIB. <b>Lectura curentă (martie 2026): +0,76σ – economia se află în regim de creștere, peste media istorică.</b>
+<b>Ce este Indicatorul Expert-Grup?</b> Indicatorul sintetizează, într-un singur semnal lunar, nouă indicatori publicați de BNS și BNM – producția industrială, comerțul cu amănuntul, exporturile, importurile, transferurile persoanelor fizice, creditul, masa monetară M3, calitatea portofoliilor bancare (NPL) și rata de bază – și clasifică starea economiei în trei regimuri: <b style="color:var(--green)">creștere</b> (indicator &gt; 0), <b style="color:var(--amber)">stagnare</b> (−0,5…0) și <b style="color:var(--red)">declin</b> (&lt; −0,5). Indicatorul este exprimat în abateri standard față de dinamica medie a perioadei 2010–2026, iar calibrarea pe PIB (PIB a/a ≈ 3,1 + 6,5 × indicator) permite citirea directă: valoarea zero corespunde unei creșteri economice de circa 3%, pragul de −0,5σ – intrării PIB în teritoriu negativ. Construit conform practicilor OCDE (CLI), Conference Board (LEI), Comisiei Europene (ESI) și Băncii Italiei (€-coin), indicatorul este disponibil cu circa 1–2 trimestre înaintea statisticii oficiale a PIB. <b>Lectura curentă (martie 2026): +0,76σ – economia se află în regim de creștere, peste media istorică.</b>
 </div>
 
 <div class="cards" id="cards"></div>
 
 <div class="panel">
-  <h2>ELI lunar și media mobilă pe 3 luni <span style="color:#999;font-weight:400">(abateri standard; fundal: regimuri)</span></h2>
+  <h2>Indicatorul Expert-Grup (lunar) și media mobilă pe 3 luni <span style="color:#999;font-weight:400">(abateri standard; fundal: regimuri)</span></h2>
   <div class="controls" id="rangeBtns">
     <button data-y="all" class="on">Tot (2010–2026)</button><button data-y="10">10 ani</button><button data-y="5">5 ani</button><button data-y="3">3 ani</button>
   </div>
   <div style="height:330px"><canvas id="c1"></canvas></div>
-  <div class="legendline">Praguri: ELI &gt; 0 → <b style="color:var(--green)">CREȘTERE</b> · −0,5…0 → <b style="color:var(--amber)">STAGNARE</b> · &lt; −0,5 → <b style="color:var(--red)">DECLIN</b> · calibrare: PIB a/a ≈ 3,1 + 6,5 × ELI</div>
-  <div class="comment"><b>Comentariu.</b> Pe parcursul a 195 de luni, ELI a surprins toate episoadele majore ale ciclului economic: criza bancară din 2014–2015 a împins indicatorul la minimul istoric (−1,65σ, august 2015), șocul pandemic l-a coborât la −1,51σ (aprilie 2020), iar redresarea post-pandemică a generat maximul istoric de +2,05σ (aprilie 2021). Criza energetică și războiul din țara vecină au readus ELI la −1,44σ (octombrie 2022), urmate de o lungă perioadă de stagnare cu episoade de declin în 2023–2024. Începând cu a doua jumătate a anului 2025, semnalul a reintrat ferm în zona de creștere și s-a consolidat la +0,5…+0,8σ în primele luni ale anului 2026 – cel mai bun interval din 2021 încoace.</div>
+  <div class="legendline">Praguri: indicator &gt; 0 → <b style="color:var(--green)">CREȘTERE</b> · −0,5…0 → <b style="color:var(--amber)">STAGNARE</b> · &lt; −0,5 → <b style="color:var(--red)">DECLIN</b> · calibrare: PIB a/a ≈ 3,1 + 6,5 × indicator</div>
+  <div class="comment"><b>Comentariu.</b> Pe parcursul a 195 de luni, Indicatorul Expert-Grup a surprins toate episoadele majore ale ciclului economic: criza bancară din 2014–2015 a împins indicatorul la minimul istoric (−1,65σ, august 2015), șocul pandemic l-a coborât la −1,51σ (aprilie 2020), iar redresarea post-pandemică a generat maximul istoric de +2,05σ (aprilie 2021). Criza energetică și războiul din țara vecină au readus indicatorul la −1,44σ (octombrie 2022), urmate de o lungă perioadă de stagnare cu episoade de declin în 2023–2024. Începând cu a doua jumătate a anului 2025, semnalul a reintrat ferm în zona de creștere și s-a consolidat la +0,5…+0,8σ în primele luni ale anului 2026 – cel mai bun interval din 2021 încoace.</div>
 </div>
 
 <div class="row2">
   <div class="panel">
-    <h2>ELI trimestrial vs. creșterea PIB (a/a, %)</h2>
+    <h2>Indicatorul Expert-Grup (trimestrial) vs. creșterea PIB (a/a, %)</h2>
     <div style="height:300px"><canvas id="c2"></canvas></div>
     <div class="legendline">Corelație contemporană 0,62 · cu avans de 1 trimestru 0,54 · 12 din 15 recesiuni semnalate (2011–2025)</div>
-    <div class="comment"><b>Comentariu.</b> ELI urmărește fidel profilul trimestrial al PIB și îl anticipează parțial: 12 din cele 15 trimestre de recesiune din 2011–2025 au fost însoțite de valori negative ale indicatorului. Abaterile vizibile se concentrează în anii șocurilor agricole (2012, 2022), întrucât producția agricolă – circa o zecime din PIB, determinată de climă – nu dispune de un indicator lunar. Episodul recent confirmă utilitatea practică: ELI a semnalat încă din vara 2025 accelerarea care a apărut în statistica oficială abia ulterior (PIB: de la −1,2% a/a în T1 2025 la +5,2% în T3 și +3,6% în T4).</div>
+    <div class="comment"><b>Comentariu.</b> Indicatorul Expert-Grup urmărește fidel profilul trimestrial al PIB și îl anticipează parțial: 12 din cele 15 trimestre de recesiune din 2011–2025 au fost însoțite de valori negative ale indicatorului. Abaterile vizibile se concentrează în anii șocurilor agricole (2012, 2022), întrucât producția agricolă – circa o zecime din PIB, determinată de climă – nu dispune de un indicator lunar. Episodul recent confirmă utilitatea practică: indicatorul a semnalat încă din vara 2025 accelerarea care a apărut în statistica oficială abia ulterior (PIB: de la −1,2% a/a în T1 2025 la +5,2% în T3 și +3,6% în T4).</div>
   </div>
   <div class="panel">
-    <h2>Contribuțiile componentelor la ELI</h2>
+    <h2>Contribuțiile componentelor la Indicatorul Expert-Grup</h2>
     <div class="sliderbar">
       <button id="prevM">◀</button>
       <input type="range" id="mslider" min="0" max="0" value="0">
@@ -138,16 +138,14 @@ const regColor={'1':COLORS.g,'0':COLORS.y,'-1':COLORS.r};
 document.getElementById('lastm').textContent=roP(D.p[last]);
 const curReg=regOf(D.ma3[last]??D.eli[last]);
 const bd=document.getElementById('badge');
-bd.textContent=regName[curReg]+' · ELI '+fmt(D.eli[last])+'σ';
+bd.textContent=regName[curReg]+' · Indicatorul Expert-Grup: '+fmt(D.eli[last])+'σ';
 bd.style.background=regColor[curReg];
 
 const lastQ=(()=>{let i=D.qeli.length-1;while(i>=0&&D.qeli[i]==null)i--;return i;})();
 const cards=[
- ['ELI lunar · '+roP(D.p[last]),fmt(D.eli[last])+'σ','peste media istorică'],
+ ['Indicatorul Expert-Grup (lunar) · '+roP(D.p[last]),fmt(D.eli[last])+'σ','peste media istorică'],
  ['Media mobilă 3 luni',fmt(D.ma3[last])+'σ','semnal netezit'],
- ['ELI trimestrial · '+D.qp[lastQ],fmt(D.qeli[lastQ])+'σ','media lunilor trimestrului'],
- ['Corelația cu PIB','0,62','contemporan · 0,54 cu avans 1T'],
- ['Acuratețea regimurilor','60%','vs. 33% clasificare aleatorie']
+ ['Indicatorul Expert-Grup (trimestrial) · '+D.qp[lastQ],fmt(D.qeli[lastQ])+'σ','media lunilor trimestrului']
 ];
 document.getElementById('cards').innerHTML=cards.map(c=>`<div class="card"><div class="k">${c[0]}</div><div class="v">${c[1]}</div><div class="d">${c[2]}</div></div>`).join('');
 
@@ -165,7 +163,7 @@ function drawC1(){
  if(c1)c1.destroy();
  c1=new Chart(document.getElementById('c1'),{type:'line',
   data:{labels:lbl,datasets:[
-   {label:'ELI lunar',data:e,borderColor:COLORS.lt,borderWidth:1.2,pointRadius:0,tension:.25},
+   {label:'Indicatorul lunar',data:e,borderColor:COLORS.lt,borderWidth:1.2,pointRadius:0,tension:.25},
    {label:'Media mobilă 3 luni',data:m,borderColor:COLORS.blue,borderWidth:2.4,pointRadius:0,tension:.3}]},
   options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
    plugins:{legend:{position:'top',align:'end',labels:{boxWidth:18,boxHeight:3}},
@@ -187,12 +185,12 @@ drawC1();
 new Chart(document.getElementById('c2'),{
  data:{labels:D.qp,datasets:[
   {type:'bar',label:'PIB real a/a, % (dreapta)',data:D.qgdp,backgroundColor:COLORS.grey,yAxisID:'y2',order:2},
-  {type:'line',label:'ELI trimestrial, σ (stânga)',data:D.qeli,borderColor:COLORS.blue,borderWidth:2.2,pointRadius:1.6,tension:.3,yAxisID:'y1',order:1}]},
+  {type:'line',label:'Indicatorul Expert-Grup, σ (stânga)',data:D.qeli,borderColor:COLORS.blue,borderWidth:2.2,pointRadius:1.6,tension:.3,yAxisID:'y1',order:1}]},
  options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
   plugins:{legend:{position:'top',align:'end',labels:{boxWidth:18,boxHeight:6}},
    tooltip:{callbacks:{label:it=>' '+it.dataset.label.split(' (')[0]+': '+(it.dataset.yAxisID==='y1'?fmt(it.parsed.y)+'σ':fmt(it.parsed.y,1)+'%')}}},
   scales:{x:{ticks:{maxTicksLimit:12,callback:function(v){const p=this.getLabelForValue(v);return p.endsWith('Q1')?p.slice(0,4):'';},autoSkip:false},grid:{display:false}},
-   y1:{position:'left',min:-2.2,max:2.45,title:{display:true,text:'ELI (σ)'}},
+   y1:{position:'left',min:-2.2,max:2.45,title:{display:true,text:'Indicatorul (σ)'}},
    y2:{position:'right',min:-18,max:20,title:{display:true,text:'PIB a/a (%)'},grid:{display:false}}}}});
 
 // contributions
@@ -205,7 +203,7 @@ function contrib(i){
 let c3=null;
 function drawC3(i){
  const cc=contrib(i);const el=document.getElementById('mlabel');
- el.textContent=roP(D.p[i])+' · ELI '+fmt(D.eli[i])+'σ';
+ el.textContent=roP(D.p[i])+' · indicator: '+fmt(D.eli[i])+'σ';
  if(c3)c3.destroy();
  if(!cc)return;
  c3=new Chart(document.getElementById('c3'),{type:'bar',
@@ -236,7 +234,7 @@ const hN=13,hI=[];for(let i=last-hN+1;i<=last;i++)hI.push(i);
 let h='<tr><th>Componenta</th>'+hI.map(i=>'<th>'+D.p[i].slice(2).replace('-','/')+'</th>').join('')+'</tr>';
 KEYS.forEach(k=>{h+='<tr><td>'+D.names[k]+'</td>'+hI.map(i=>{const z=D.z[k][i];
  return '<td style="background:'+heatColor(z)+'" title="'+roP(D.p[i])+' · Z: '+(z==null?'–':fmt(z))+' · '+(D.v[k][i]==null?'':fmt(D.v[k][i],1)+' '+D.units[k])+'">'+(z==null?'–':fmt(z,1))+'</td>';}).join('')+'</tr>';});
-h+='<tr><td style="font-weight:700;color:#990000">ELI (compozit)</td>'+hI.map(i=>'<td style="font-weight:700;background:'+heatColor(D.eli[i])+'">'+(D.eli[i]==null?'–':fmt(D.eli[i],1))+'</td>').join('')+'</tr>';
+h+='<tr><td style="font-weight:700;color:#990000">Indicatorul Expert-Grup (compozit)</td>'+hI.map(i=>'<td style="font-weight:700;background:'+heatColor(D.eli[i])+'">'+(D.eli[i]==null?'–':fmt(D.eli[i],1))+'</td>').join('')+'</tr>';
 document.getElementById('heat').innerHTML=h;
 </script>
 </body>
